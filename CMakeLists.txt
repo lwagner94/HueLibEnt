@@ -27,6 +27,12 @@ target_include_directories(HueEnt
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+install(TARGETS HueEnt DESTINATION lib)
+install(FILES include/debug.h DESTINATION include)
+install(FILES include/dtls.h DESTINATION include)
+install(FILES include/hue_entertainment.h DESTINATION include)
+install(FILES include/hue_rest.h DESTINATION include)
+
 # Example: BasicColourFade
 add_executable(bcf examples/BasicColourFade/main.c)
 target_link_libraries(bcf PUBLIC HueEnt)
